@@ -1,0 +1,13 @@
+spring:
+  cloud:
+    azure:
+      servicebus:
+        connection-string: Endpoint=sb://galang-sb-namespace.servicebus.windows.net/;SharedAccessKeyName=RootManageSharedAccessKey;SharedAccessKey=XUqpXh4oX7CDP/tP4aWs5QlJ9WXD62u0C+ASbAi+m6k=
+    stream:
+      bindings:
+        publisher-0:
+          destination: message-queue
+      servicebus:
+        publisher-0:
+          producer:
+            entity-type: queue
